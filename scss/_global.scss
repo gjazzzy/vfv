@@ -1,0 +1,144 @@
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  // overflow-y: hidden;
+}
+
+.container{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.page-section{
+  height: 100vh;
+  padding: 0px 0 50px;
+  // background-image: url('../image/content/section-cover.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+
+.close-btn{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 0;
+  padding: 5px;
+  right: 10px;
+  top: 10px;
+  &:hover{
+        background: #cacaca;
+     }
+  
+}
+
+.back-btn{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 0;
+  padding: 5px;
+  left: 0px;
+  top: 10px;
+  background:transparent;
+  &:hover{
+        background: #cacaca;
+     }
+}
+
+.side-wrap{
+  @include regular;
+  position: relative;
+  position: absolute;
+  display: flex;
+  background: #ffffff;
+  gap: 20px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px 20px 20px 40px;
+  border-radius: 20px 0 0px 20px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.modal{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000c2;
+  z-index: 10;
+}
+
+button{
+  @include regular;
+  cursor: pointer;
+  border-radius: 50px;
+  color: #000000;
+  background: #F2F2F2;
+  border: 1px solid #a6a6a6;
+}
+
+.button-orange{
+  @include regular;
+  font-size: 16px;
+  border-radius: 50px;
+  background: #F66A15;
+  opacity: 0.85;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  transition:  0.3s;
+  max-width: 400px;
+  width: 100%;
+  border:0;
+  &:hover{
+     opacity: 1;
+  }
+}
+
+//counter
+.counter{
+  background: #F2F2F2;
+  color: #F66A15;
+  padding: 5px 0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  max-width: max-content;  
+}
+
+.counter-btn{
+  padding: 1px 2px;
+  border: 0;
+  background:transparent;
+  &:hover{
+     background: #cacaca;
+  }
+}
+.counter-price{
+  @include bold;
+  color: #F66A15;
+  margin: 0 15px;
+  font-size: 16px;
+  font-size: 18px;
+}
+
+.counter-btn img{
+  width: 20px;
+}
+

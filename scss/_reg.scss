@@ -1,0 +1,466 @@
+@import "fonts";
+//reg
+
+.reg{
+   &__wrap{ 
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 37px 48px;
+      gap: 20px;
+      max-width: 333px;
+      width: 100%;
+   }
+
+   &__title{
+      @include light;
+      position: relative;
+      font-size: 20px;
+      color: #000000;
+      text-transform: uppercase;
+   }
+
+   &__form{
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+   }
+
+   &__input{
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      max-width: 333px;
+      border: 0;
+      padding: 0px 5px 12px 5px;
+      border-bottom: 1px #000000 solid;
+      &:focus{
+         outline: none;
+      }
+   }
+
+   &__btn{
+      margin-top: 10px;
+      padding: 10px;
+   }
+}
+
+
+.login{
+   &__wrap{ 
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 37px 48px;
+      gap: 20px;
+      max-width: 333px;
+      width: 100%;
+   }
+
+   &__title{
+      @include light;
+      position: relative;
+      font-size: 20px;
+      color: #000000;
+      text-transform: uppercase;
+   }
+
+   &__form{
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+   }
+
+   &__input{
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      max-width: 333px;
+      border: 0;
+      padding: 0px 5px 12px 5px;
+      border-bottom: 1px #000000 solid;
+      &:focus{
+         outline: none;
+      }
+   }
+
+   &__btn{
+      margin-top: 10px;
+      padding: 10px;
+   }
+}
+
+.relogin{
+   &__wrap{ 
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 37px 48px;
+      gap: 20px;
+      max-width: 333px;
+      width: 100%;
+   }
+
+   &__title{
+      @include light;
+      position: relative;
+      font-size: 20px;
+      color: #000000;
+      text-transform: uppercase;
+   }
+
+   &__form{
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+   }
+
+   &__input{
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      max-width: 333px;
+      border: 0;
+      padding: 0px 5px 12px 5px;
+      border-bottom: 1px #000000 solid;
+      &:focus{
+         outline: none;
+      }
+   }
+
+   &__btn{
+      margin-top: 10px;
+      padding: 10px;
+   }
+}
+
+//user
+.user{
+   @include light;
+   &__wrap{ 
+      justify-content: space-between;
+      flex-direction: column;
+   }
+
+   &__name{
+      display: flex;
+      align-items: end;
+      justify-content: start;
+      color: #000000;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+   }
+
+   &__phone{
+      color: #000000;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      border-bottom: 1px #a6a6a64f solid;
+   }
+
+   &__items{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      height: 100%;
+   }
+
+   &__item{
+      cursor: pointer;
+      border-bottom: 1px #a6a6a64f solid;
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &:hover{
+         border-bottom: #5c5b5b 1px solid;
+      }
+   }
+
+
+   &__btns{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      gap: 20px;
+      & button, a{
+         width: 250px;
+      }
+   }
+}
+
+.adress{
+   &__wrap{
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+   }
+
+   &__info{
+      @include bold;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      justify-content: center;
+   }
+
+   &__form-adress{
+      @include bold;
+      font-size: 20px;
+   }
+   
+   &__form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   &__wrap-input{
+      display: flex;
+      max-width: 200px;
+      flex-direction: column;    
+      gap:20px
+   }
+
+   &__input{
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      border: 0;
+      padding: 0px 5px 5px 0px;
+      border-bottom: 1px #000000 solid;
+      &:focus{
+         outline: none;
+      }
+   }
+
+   &__btn{
+      width: 100%;
+   }
+}
+.adress__edit{
+
+   &-title{
+      font-size: 20px;
+   }
+   &-wrap{
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &-items{
+      height: 100%;
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 30px;
+   }
+
+   &-name{
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      text-decoration: underline;
+      &::after{
+         content: '';
+         position: absolute;
+         right: -35px;
+         width: 20px;
+         top: 5px;
+         height: 20px;
+         background-repeat: no-repeat;
+         background-size: 50%;
+         background-image: url('../images/icons/icon-close.svg');
+
+      }
+   }
+}
+
+.pay{
+   &__wrap{
+      position: relative;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+   }
+
+   &__info{
+      @include bold;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      justify-content: center;
+   }
+
+   
+   &__form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   &__wrap-input{
+      margin-top: 15px;
+      display: flex;
+      max-width: 200px;
+      flex-direction: column;    
+      gap:20px
+   }
+
+   &__input{
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      border: 0;
+      padding: 0px 5px 5px 0px;
+      border-bottom: 1px #000000 solid;
+      &:focus{
+         outline: none;
+      }
+   }
+
+   &__form-textarea{
+      resize: none;
+      max-width: 200px;
+      height: 60px;
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      border: 0;
+      padding: 0px 5px 5px 0px;
+      border-bottom: 1px #000000 solid;
+      &:focus{
+         outline:none;
+      } 
+   }
+
+   &__btn{
+      width: 100%;
+   }
+}
+
+
+//card
+.card{
+   &__wrap{ 
+      @include regular;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      gap: 20px;
+      max-width: 800px;
+      width: 100%;
+   }
+
+   &__item{
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+   }
+   &__img{
+      object-fit: cover;
+      object-position: bottom;
+      max-width: 400px;
+      max-height: 350px;
+      border-radius: 20px;
+   }
+   &__info{
+      max-width: 300px;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   &__counter{
+      background: #F2F2F2;
+      padding: 5px 0;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      max-width: max-content;      
+   }
+   &__num{
+      margin: 0 15px;
+      font-size: 16px;
+      color: #F66A15;;
+      font-size: 18px;
+   }
+   &__btn{
+      padding: 1px 2px;
+      border: 0;
+      background:transparent;
+      &:hover{
+         background: #cacaca;
+      }
+   }
+   &__btn img{
+      width: 20px;
+   }
+
+   &__recomend{
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 50px;
+      flex-wrap: wrap;
+      overflow-y: scroll;
+      max-height: 500px;
+      &::after{
+         content: 'Посмотрите ещё';
+         @include regular;
+         position: absolute;
+         font-size: 25px;
+         left: 0;
+         top: 0;
+      }
+   }
+
+   &__recomend-item{
+      display: flex;
+      flex-direction: column;
+      max-width: 150px;
+      max-height: 350px;
+   }
+
+   &__item-name{
+      width: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+   }
+}
+

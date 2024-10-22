@@ -1,0 +1,572 @@
+@import "reg";
+@import "fonts";
+@import "reset";
+@import "global";
+@import "pay";
+
+//header
+.header{
+   position: fixed;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   transition:  1s;
+   padding: 10px 0;
+   background: #ffffff;
+
+   &__wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+   }
+   
+   &__search--wrapper{
+      position: relative;
+      display: flex;
+      max-width: 500px;
+      width: 100%;
+      background: transparent;
+   }
+
+   &__search--wrapper-input { 
+      @include regular;
+      width: 100%; 
+      background: transparent;
+      height: 50px;
+      padding: 0 10px 0px 35px;
+      color: #000000;
+      line-height: 18px;
+      border-radius: 50px;
+      border: 1px solid #a6a6a6;
+      outline: none;
+    }
+
+   &__search--wrapper-btn { 
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 50px;
+      background: transparent;
+      border: 0px;
+      transition: all 0.3s;
+   }
+   &__search--wrapper-btn:hover{
+      transform: scale(1.1);
+   }
+
+   &__btns{
+      display: flex;
+      justify-content: center;
+      gap: 10px;      
+   }
+
+   &__btn{
+      @include bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 15px;
+      gap: 10px;
+      background: transparent;
+   }
+
+   &__btn-cart{
+      position: relative;
+      border-radius: 50px;
+      padding: 13px;
+      border: 0;
+      width: 50px;
+      height: 50px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: #F66A15;
+   }
+   &__counter{
+      position: absolute;
+      padding: 1px 5px;
+      bottom: -5px;
+      right: -4px;
+      border-radius: 20px;
+      background: #FFAF19;
+   }
+} //./header
+
+//desctop
+.desctop{
+   position: relative;
+   top: 89px;
+   background: #F2F2F2;
+   display: flex;
+   min-height: calc(100vh - 114px);
+   height: 100%;
+   gap: 25px;
+   padding-top: 25px;
+   justify-content: space-between;   
+}
+
+//left
+.left{
+   position: relative;
+   background: transparent;
+   max-width: 240px;
+   min-width: 180px;
+   width: 100%;
+
+   &__sidebar{
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      max-width: 240px;
+      min-width: 180px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      top: 114px;
+      bottom: 20px;
+      gap: 10px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar{
+         width: 0;
+         height: 0;
+         display: none;
+         background: transparent;     
+       }
+     
+   }
+
+   &__sidebar-items{
+      cursor: pointer;
+      display: flex;
+      align-items: start;
+      gap: 8px;
+      margin-bottom: 20px;
+   }
+
+   &__sidebar-menu{
+      @include regular;
+      letter-spacing: -.5px;
+      display: flex;    
+      justify-content: start;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   &__sidebar-item{
+      display: none;
+      flex-direction: column;
+   }
+
+   &__sidebar-item--active{
+      display: flex;
+        flex-direction: column;
+      position: relative;
+   }
+
+   
+   &__sidebar-img{
+      width: 30px;
+      height: 30px;
+      border:  1px solid #a6a6a64f;
+      object-fit: cover;
+      object-position: bottom;
+      border-radius: 10px;
+}
+}//./left
+
+.active{
+   display: flex;
+}
+
+//main главаная 
+main{
+   position: relative;
+   border-radius: 20px;
+   padding: 20px 0px;
+   margin-bottom: 20px;
+   width: 100%;
+   background: #ffff;
+   z-index: 0     ;
+}
+.main{
+   &__items{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      flex-wrap: wrap;
+      gap: 10px;
+      z-index: 5;
+      display: grid;
+      // grid-template-columns: repeat(4 ,1fr);
+      
+   }
+
+   &__item{
+      @include regular;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      background: #ffff;
+      width: 212px;
+      border: 1px solid #a6a6a64f;
+      padding-bottom: 10px;
+      border-radius: 20px;  
+      cursor: pointer;
+      &::before{
+         @include bold;
+         position: absolute;
+         content: '1';
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: #000000;
+         font-size: 50px;
+         border-radius: 18px;
+         top: 0;
+         width: 100%;
+         z-index: 1;
+         height: 212px;
+         background: #dddcdc96;
+      }   
+
+   }
+
+   &__item-img{
+      position: relative;
+      width: 210px;
+      height: 210px;
+      border-radius: 20px;
+      object-position: bottom;
+      object-fit:cover;
+   }
+
+   &__item-name{
+      width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+   }
+
+   &__item-weight{
+      font-size: 14px;
+   }
+}
+
+
+// right
+.right{
+   position: relative;
+   background: transparent;
+   display: flex;
+   justify-content: end;
+   max-width: 450px;
+   min-width: 200px;
+   width: 100%;
+
+   &__sidebar{
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 450px;
+      min-width: 200px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      top: 114px;
+      bottom: 20px;
+      gap: 10px;
+   }
+
+   &__sidebar-adress{
+      @include bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      &:hover{
+         text-decoration: underline 1px
+      }
+   }
+
+   &__sidebar-time{
+      @include bold;
+      color: #a6a6a6;
+      font-size: 20px;
+   }
+   &__sidebar-items{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 10px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      
+      &::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+        display: none;
+        background: transparent; 
+      }
+   }
+
+   &__sidebar-item{
+      @include regular;
+      position: relative;
+      display: flex;
+      align-items: start;
+      border-bottom: 1px #a6a6a64f solid;
+      background: #ffffff;
+      gap: 10px;
+      padding-bottom: 10px;
+      cursor: pointer;
+   }
+
+   &__sidebar-img{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #a6a6a64f;
+      object-fit: cover;
+      object-position: bottom;
+      border-radius: 20px;
+   }
+
+   &__sidebar-info{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      gap: 5px;
+   }
+
+   &__sidebar-text{
+      font-size: 16px;
+      letter-spacing: -0.3px;
+      width: 100%;
+      max-width: 250px;
+      min-width: 100px;
+      max-height: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+   
+   }
+
+   &__sidebar-weight{
+      font-size: 14px;
+   }
+
+   &__sidebar-price{
+      @include bold;
+   }
+
+   &__sidebar-btn{
+      padding: 1px 2px;
+      border: 0;
+      background:transparent;
+      &:hover{
+         background: #cacaca;
+      }
+   }
+
+   &__btn-close{    
+      top: 0px;
+      right: 0;
+   }
+
+   // right__sidebar-bottom
+   &__sidebar-bottom{
+      @include bold;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 5px;
+   }
+
+   &__sidebar-sum{
+      text-align: center;
+   }
+
+   &__btn-pay{
+      padding: 20px; 
+   }
+
+}
+
+@media screen and (max-width:1250px) {
+   body{
+      background: #ffffff;
+   }
+   .desctop{
+      background: #ffffff;
+      padding: 25px 10px;
+   }
+   main{
+      background: transparent;
+   }
+
+   .header{
+      &__logo,.header__btn-login,.header__btn-reg{
+         display: none;
+      }
+      &__search--wrapper{
+         width: 100%;
+         max-width: 1200px;
+         min-width: none;
+      }
+      &__btn-cart{
+         display: flex;
+      }
+   }
+   .right{
+      display: none;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      max-width:none;
+
+      &__sidebar{
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         border-radius: 0px;
+         padding: 20px;
+         bottom: 0px;
+         max-width: none;
+         align-items: center;
+         width: 100%;
+         gap: 10px;
+      }
+
+      &__sidebar-items{
+         width: 100%;
+
+      }
+            
+      &__sidebar-img{
+         width: 120px;
+         height: 120px;
+      }
+   }
+
+   .left{
+      display: none;
+   }
+ 
+
+
+   .pay{
+      &__wrap{
+         position: fixed;
+         max-width: none;
+         max-height: none;
+         align-items: center;
+         border-radius: 0px;
+         width: 100%;
+         height: 100%;
+         padding: 20px
+      }
+
+      &__info{
+         @include bold;
+         width: 100%;
+         max-width: 500px;
+      }
+   }
+}
+
+
+@media screen and (max-width:682px) {
+   .desctop{
+      padding: 25px 5px;
+   }
+   .main{
+      &__items{
+         display: flex;
+         align-items: center;
+         justify-content:center;
+         gap: 5px;
+      }
+
+      &__item{
+         max-width: 175px;
+         min-width:none ;
+         width: 100%;   
+      }
+   
+      &__item-img{
+         max-width:175px;
+         min-width: none;
+      }
+   
+      &__item-name{
+         max-width: 170px;
+         min-width: none;
+      }
+   }
+}
+
+
+@media screen and (max-width:383px) {
+      .main{   
+         &__item{
+            width: 100%;
+            max-width: 159px;
+            min-width:none ;
+            width: 100%;   
+         }
+      
+         &__item-img{
+            max-width: 150px;
+            min-width:none ;
+         }
+      
+         &__item-name{
+            max-width: 150px;
+            min-width: none;
+         }
+      }
+   
+   }
+
+   @media screen and (max-width:349px) {
+      .main{  
+         &__items{
+            gap: 20px;
+         } 
+         &__item{
+            width: 100%;
+            height: 100%;
+            max-height: 350px;
+            max-width: 340px;
+            min-width:none ;
+         }
+      
+         &__item-img{
+            width: 100%;
+            max-width: 340px;
+            min-width:none ;
+         }
+      
+         &__item-name{
+              
+            max-width: 340px;
+            min-width: none;
+         }
+      }
+   
+   }
+
